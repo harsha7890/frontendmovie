@@ -17,7 +17,7 @@ public movies : Movies={
   total_results:1,
   total_pages:1
 };
-  constructor(private searchdataService: SearchdataService,private router :Router) { }
+  constructor(private searchdataService: SearchdataService,private router: Router) { }
   ngOnInit() {
    
   }
@@ -25,6 +25,8 @@ public movies : Movies={
   searchbox="";
   onReceiving(searchmovie:string){
     this.searchbox=searchmovie;
-    this.searchdataService.getMovies(this.searchbox).subscribe(data => this.movies = data)
+    // this.searchdataService.getMovies(this.searchbox).subscribe(data => this.movies = data)
+   this.searchdataService.setMovie(this.searchbox);
+    this.router.navigate(["cards", this.searchbox]);
   }
 }

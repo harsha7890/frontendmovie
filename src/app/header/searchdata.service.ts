@@ -11,4 +11,11 @@ export class SearchdataService {
   public getMovies(urlextension:string): Observable<Movies>{
     return this.http.get<Movies>(this.url.concat(urlextension.replace(' ','+')));
   }
+  moviename="";
+  public setMovie(urlextension:string){
+    this.moviename=urlextension;
+  }
+  public getMovie(){
+    return this.moviename;
+  }
 }

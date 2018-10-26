@@ -1,0 +1,30 @@
+<!-- <p>
+  smartbody works!
+</p>
+<p>{{this.movies}}</p> -->
+<!-- <p>{{movies1.results.page}}</p> -->
+<!-- <app-details [movies]="movies1"></app-details> -->
+<div #card>
+<ul *ngFor="let movie of movies1.results">
+    <mat-card class="example-card">
+        <mat-card-header>
+         
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{movie.title}}</mat-card-title>
+          <mat-card-subtitle>{{movie.release_date}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}" #image>
+        <mat-card-content>
+          <p>
+            
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="add(movie)">Add to wishlist</button>
+         
+        </mat-card-actions>
+      </mat-card>
+      
+  </ul>
+
+</div>

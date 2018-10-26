@@ -1,8 +1,10 @@
+import { SmartbodyComponent } from './body/smartbody/smartbody.component';
+import { DetailsComponent } from './body/details/details.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  // {path:'searchResults',component:}
+  {path:'cards/:movie',component:SmartbodyComponent}
 ];
 
 @NgModule({
