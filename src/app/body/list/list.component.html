@@ -1,0 +1,33 @@
+<p>
+  list works!
+</p>
+<ul *ngFor="let movie of movies">
+  <!-- <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}" #image>
+<li>{{movie.id}}</li>
+<li>{{movie.movie}}</li>
+<li>{{movie.release_date}}</li>
+<li>{{movie.comments}}</li>
+<input type="text" [(ngModel)]="movie.comments" />
+<button (click)="update(movie)">update</button>
+<button (click)="delete(movie)">delete</button> -->
+<mat-card class="example-card">
+  <mat-card-header>
+    <div><img mat-card-image src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}" #image>
+    </div>
+      
+  </mat-card-header>
+  <div><div mat-card-avatar class="example-header-image"></div>
+  <mat-card-title>{{movie.movie}}</mat-card-title>
+  <mat-card-subtitle>{{movie.release_date}}</mat-card-subtitle>
+  
+</div>
+  <mat-card-content>
+        {{movie.comments}}
+  </mat-card-content>
+  <mat-card-actions>
+      <input type="text" [(ngModel)]="movie.comment" />
+    <button mat-button (click)="update(movie)">update</button>
+    <button mat-button (click)="delete(movie)">delete</button>
+  </mat-card-actions>
+</mat-card>
+</ul> 

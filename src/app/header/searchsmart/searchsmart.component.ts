@@ -28,5 +28,6 @@ public movies : Movies={
     // this.searchdataService.getMovies(this.searchbox).subscribe(data => this.movies = data)
    this.searchdataService.setMovie(this.searchbox);
     this.router.navigate(["cards", this.searchbox]);
+    location.reload();
   }
 }

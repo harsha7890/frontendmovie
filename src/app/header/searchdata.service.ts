@@ -14,6 +14,7 @@ export class SearchdataService {
   moviename="";
   public setMovie(urlextension:string){
     this.moviename=urlextension;
+    location.reload();
   }
   public getMovie(){
     return this.moviename;
